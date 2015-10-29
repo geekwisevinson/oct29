@@ -861,3 +861,30 @@
         window.Github = Github;
     }
 }).call(this);
+
+
+
+
+////////Debug Mode/////
+debug_mode = 1;
+
+document.addEventListener('keydown',function(){
+
+    if (debug_mode != 1){return;}
+    if (event.keyCode === 49){
+        window.location = 'index.html';
+    }
+    if (event.keyCode === 50){
+        window.location = 'sign_up.html';
+    }
+    if (event.keyCode === 51){
+        window.location = 'verification_page.html';
+    }
+    if (event.keyCode === 52){
+        window.location = 'profile_page.html';
+    }
+    if (event.keyCode === 53){
+        delete window.localStorage.username;
+        alert('logged out');
+    }
+});
